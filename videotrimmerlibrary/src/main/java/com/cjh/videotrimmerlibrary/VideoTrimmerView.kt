@@ -35,9 +35,10 @@ class VideoTrimmerView : FrameLayout {
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         LayoutInflater.from(context).inflate(mLayoutId, this)
         getRecyclerView().layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        initialControlIcon()
+        /*initialControlIcon()*/
         RegulatorControl.getInstance(this)
     }
+/*
 
     private fun initialControlIcon() {
         rootView.videoViewWraper.setOnClickListener {
@@ -51,14 +52,15 @@ class VideoTrimmerView : FrameLayout {
         }
         setControlIcon(R.drawable.video_play_icon)
     }
+*/
 
-    fun setControlIcon(resId: Int) {
+   /* fun setControlIcon(resId: Int) {
         Glide.with(context).load(resId).transition(DrawableTransitionOptions().crossFade()).into(rootView.control)
     }
 
     @SuppressLint("WrongViewCast")
     fun getVideoView(): VideoView = findViewById(R.id.videoView)
-
+*/
     @SuppressLint("WrongViewCast")
     fun getRecyclerView(): RecyclerView = findViewById(R.id.recyclerView)
 

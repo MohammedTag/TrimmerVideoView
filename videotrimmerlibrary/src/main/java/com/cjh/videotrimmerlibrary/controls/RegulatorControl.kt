@@ -83,7 +83,7 @@ class RegulatorControl private constructor(leftPos: TextView, rightPos: TextView
                 synchronized(VideoViewControl::class) {
                     if (mInstance == null) {
                         mInstance = RegulatorControl(videoTrimmerView.getLeftPosTextView(), videoTrimmerView.getRightPosTextView())
-                        VideoViewControl.getInstance(videoTrimmerView.getVideoView())
+                        /*VideoViewControl.getInstance(videoTrimmerView.getVideoView())*/
                         RecyclerViewControl.getInstance(videoTrimmerView.getRecyclerView(), mInstance!!)
                         TrimmerSeekBarControl.getInstance(videoTrimmerView.getTrimmerSeekBar(), mInstance!!, mInstance!!)
                     }
